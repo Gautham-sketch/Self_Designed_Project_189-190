@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Lost Teddy</title>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+      
+    </head>
+
+    <body>
+        <a-scene id="scene">
+          <a-assets>
+            <a-asset-item src="./assets/Forest_with_huts.glb" id="forest"></a-asset-item>
+            <a-asset-item src="./assets/Teddy_Bear.glb" id="teddy"></a-asset-item>
+          </a-assets>
+
+          <a-sky color="cyan"></a-sky>
+          <a-plane color="green" position="-1 -2 -3" scale="10 10 10" rotation="90 0 0"></a-plane>
+          <a-entity id="environment" gltf-model="#forest" scale="0.06 0.06 0.06" position="-1 0.5 -3"></a-entity>
+        </a-scene>
+    </body>
+</html>
